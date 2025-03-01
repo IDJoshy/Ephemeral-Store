@@ -1,0 +1,35 @@
+{
+  "name": "ephemeral-store",
+  "version": "1.0.0",
+  "description": "BackEnd",
+  "homepage": "https://github.com/IDJoshy/Ephemeral-Store#readme",
+  "bugs": {
+    "url": "https://github.com/IDJoshy/Ephemeral-Store/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IDJoshy/Ephemeral-Store.git"
+  },
+  "license": "ISC",
+  "author": "Ephemeral-Josh",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.11.0",
+    "mongoose-paginate-v2": "^1.9.0",
+    "passport": "^0.7.0",
+    "passport-github": "^1.1.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {}
+}
