@@ -1,7 +1,7 @@
-import {Router} from 'express';
-import { getUsers, getUser, createUser, updateUser, deleteUser } from '../controllers/usersController.js';
-import {authorization} from '../config/middlewares.js';
-import passport from 'passport';
+import {Router} from "express";
+import { getUsers, getUser, createUser, updateUser, deleteUser } from "../controller/usersController.js";
+import {authorization} from "../config/middlewares.js";
+import passport from "passport";
 const usersRouter = Router();
 
 usersRouter.get('/', passport.authenticate("jwt"), authorization("Admin"), getUsers);

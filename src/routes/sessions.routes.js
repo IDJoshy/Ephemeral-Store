@@ -1,6 +1,6 @@
 import { Router } from "express";
 import passport from "passport";
-import { githubLogin, login, register } from "../controllers/sessionsController.js";
+import { githubLogin, login, register } from "../controller/sessionsController.js";
 
 const sessionsRouter = Router();
 

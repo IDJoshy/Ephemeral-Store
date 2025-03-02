@@ -2,7 +2,7 @@ import passport from "passport";
 import local from "passport-local";
 import GithubStrategy from "passport-github";
 import jwt from "passport-jwt";
-import userModel from "../models/userModels.js";
+import userModel from "../models/user.model.js";
 import { createHash, validatePassword } from "../utils/bcrypt.js";
 
 const localStrategy = local.Strategy;
