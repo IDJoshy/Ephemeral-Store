@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "a046edec-aacb-47b1-a81d-af1ec7834c01",
+		"name": "BackEndII",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36340359"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Josh\",\r\n    \"last_name\": \"Auris\",\r\n    \"age\": 21,\r\n    \"email\": \"joshyalove@gmail.com\",\r\n    \"password\": \"ephemeral\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sessions/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sessions",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Josh\",\r\n    \"last_name\": \"Auris\",\r\n    \"age\": 21,\r\n    \"email\": \"joshyalove@gmail.com\",\r\n    \"password\": \"ephemeral\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sessions/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sessions",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Josh\",\r\n    \"last_name\": \"Auris\",\r\n    \"age\": 21,\r\n    \"email\": \"joshyalove@gmail.com\",\r\n    \"password\": \"ephemeral\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sessions/current",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sessions",
+						"current"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

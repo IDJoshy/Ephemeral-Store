@@ -101,12 +101,16 @@ const initializePassport = () =>
         }
     }))
 
-    passport.use('jwt', new JWTStrategy({
+    passport.use('jwt', new JWTStrategy(
+    {
         jwtFromRequest: ExtractJWT.fromExtractors([cookieExtractor]), 
-        secretOrKey: "secretCode"
-    },(jwt_payload, done) => {
+        secretOrKey: "ephemeralSecret"
+    },
+    (jwt_payload, done) => 
+    {
         try 
         {
+            console.log(jwt_payload);
             return done(null, jwt_payload);
         } 
         catch (e) 
