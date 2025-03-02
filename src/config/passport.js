@@ -25,7 +25,7 @@ const initializePassport = () =>
     passport.use('register', new localStrategy({passReqToCallback: true, usernameField: 'email'},async(req,username, password, done) => 
     {
         try 
-    {
+        {
             const {first_name, last_name, email, password, age} = req.body
     
             if(first_name == undefined || last_name == undefined || email == undefined || password == undefined || age == undefined) 

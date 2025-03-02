@@ -11,6 +11,6 @@ indexRouter.use("/api/cart", cartRouter);
 indexRouter.use("/api/sessions", sessionsRouter);
 indexRouter.use("/api/products", productsRouter);
 
-indexRouter.use("*", (req, res) => res.status(404).send("Not Found"));
+indexRouter.use("*", (req, res) => res.status(404).send("Not found"));
 
 export default indexRouter;

@@ -22,7 +22,7 @@ app.use(session({
     secret: "secretCode",
     resave: true,
     saveUninitialized: true
-}))
+}));
 
 connectToDatabase(
     "mongodb+srv://EphemeralJosh:ojGibNPUuew2feoh@backend-1-cluster.dy2l2.mongodb.net/?retryWrites=true&w=majority&appName=BackEnd-1-Cluster",
