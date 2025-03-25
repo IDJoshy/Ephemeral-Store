@@ -5,10 +5,10 @@ import {authorization} from "../config/middlewares.js";
 
 const cartRouter = Router();
 
-cartRouter.get('/:cid', passport.authenticate("jwt"), authorization("User"), getCart);
-cartRouter.post('/:cid/products/:pid', passport.authenticate("jwt"), authorization("User"), insertProductCart);
-cartRouter.post('/:cid/checkout', passport.authenticate("jwt"), authorization("User"), checkout);
-cartRouter.delete('/:cid/products/:pid', passport.authenticate("jwt"), authorization("User"), deleteProductCart);
-cartRouter.delete('/:cid', passport.authenticate("jwt"), authorization("User"), deleteCart);
+cartRouter.get('/:cid', passport.authenticate("jwt"), authorization("user"), getCart);
+cartRouter.post('/:cid/products/:pid', passport.authenticate("jwt"), authorization("user"), insertProductCart);
+cartRouter.post('/:cid/checkout', passport.authenticate("jwt"), authorization("user"), checkout);
+cartRouter.delete('/:cid/products/:pid', passport.authenticate("jwt"), authorization("user"), deleteProductCart);
+cartRouter.delete('/:cid', passport.authenticate("jwt"), authorization("user"), deleteCart);
 
 export default cartRouter;
