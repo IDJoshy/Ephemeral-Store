@@ -12,7 +12,7 @@ const generateToken = (user) =>
             age: user.age, 
             rol: user.rol
         }, 
-        process.env.JWT_SECRET, 
+        process.env.SECRET_JWT, 
         {expiresIn: '24h'});
     return token;
 }
