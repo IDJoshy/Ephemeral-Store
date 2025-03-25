@@ -1,5 +1,5 @@
+import "dotenv/config";
 import jwt from "jsonwebtoken";
-let secret = "ephemeralSecret";
 
 const generateToken = (user) => 
 {
@@ -12,7 +12,7 @@ const generateToken = (user) =>
             age: user.age, 
             rol: user.rol
         }, 
-        secret, 
+        process.env.JWT_SECRET, 
         {expiresIn: '24h'});
     return token;
 }

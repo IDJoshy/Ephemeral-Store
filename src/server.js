@@ -6,27 +6,27 @@ import passport from "passport";
 import session from "express-session";
 import indexRouter from "./routes/index.routes.js";
 import initializePassport from "./config/passport.js";
-
+import "dotenv/config";
 
 const app = express();
 const PORT = 8080;
 
 app.use(express.json());
-app.use(cookieParser("ephemeralSecret"));
+app.use(cookieParser(process.env.SECRET_COOKIE));
 app.use(session({
     store: MongoStore.create({
-        mongoUrl: "mongodb+srv://EphemeralJosh:ojGibNPUuew2feoh@backend-1-cluster.dy2l2.mongodb.net/?retryWrites=true&w=majority&appName=BackEnd-1-Cluster",
-        dbName: "EphemeralStore",
+        mongoUrl: process.env.MONGO_URL,
+        dbName: process.env.MONGO_DB,
         ttl: 25 
     }),
-    secret: "secretCode",
+    secret: process.env.SECRET_SESSION,
     resave: true,
     saveUninitialized: true
 }));
 
 connectToDatabase(
-    "mongodb+srv://EphemeralJosh:ojGibNPUuew2feoh@backend-1-cluster.dy2l2.mongodb.net/?retryWrites=true&w=majority&appName=BackEnd-1-Cluster",
-    "EphemeralStore"
+    process.env.MONGO_URL,
+    process.env.MONGO_DB
 );
 
 initializePassport();
