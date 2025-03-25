@@ -1,9 +1,11 @@
+import "dotenv/config";
 import passport from "passport";
 import local from "passport-local";
 import GithubStrategy from "passport-github";
 import jwt from "passport-jwt";
 import userModel from "../models/user.model.js";
 import { createHash, validatePassword } from "../utils/bcrypt.js";
+
 
 const localStrategy = local.Strategy;
 const JWTStrategy = jwt.Strategy;
@@ -104,7 +106,7 @@ const initializePassport = () =>
     passport.use('jwt', new JWTStrategy(
     {
         jwtFromRequest: ExtractJWT.fromExtractors([cookieExtractor]), 
-        secretOrKey: "ephemeralSecret"
+        secretOrKey: process.env.SECRET_JWT
     },
     (jwt_payload, done) => 
     {
