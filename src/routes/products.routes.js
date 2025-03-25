@@ -7,8 +7,8 @@ const productsRouter = Router();
 
 productsRouter.get('/', passport.authenticate("jwt"), getProducts);
 productsRouter.get('/:pid', passport.authenticate("jwt"), getProduct);
-productsRouter.post('/', passport.authenticate("jwt"), authorization("Admin"), createProduct);
-productsRouter.put('/:pid', passport.authenticate("jwt"), authorization("Admin"), updateProduct);
-productsRouter.delete('/:pid', passport.authenticate("jwt"), authorization("Admin"), deleteProduct);
+productsRouter.post('/', passport.authenticate("jwt"), authorization("admin"), createProduct);
+productsRouter.put('/:pid', passport.authenticate("jwt"), authorization("admin"), updateProduct);
+productsRouter.delete('/:pid', passport.authenticate("jwt"), authorization("admin"), deleteProduct);
 
 export default productsRouter;

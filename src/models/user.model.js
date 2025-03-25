@@ -16,10 +16,10 @@ const userSchema = new Schema({
 userSchema.post("save", async function (doc) {
     try 
     {
-        if (!doc.cart)
+        if (!doc.cartId)
         {
             const newCart = await cartModel.create({products: []});
-            await model("users").findByIdAndUpdate(doc._id, {cart: newCart._id});
+            await model("users").findByIdAndUpdate(doc._id, {cartId: newCart._id});
         }
     }
     catch (error) 
