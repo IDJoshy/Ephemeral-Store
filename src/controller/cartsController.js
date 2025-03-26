@@ -162,7 +162,7 @@ export const checkout =  async(req,res) =>
                     if(product)
                     {
                         product.stock -= prod.quantity;
-                        totalAmount += prod.price * prod.quantity;
+                        totalAmount += product.price * prod.quantity;
                         await product.save();
                     }
 
