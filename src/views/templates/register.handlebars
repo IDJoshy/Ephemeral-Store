@@ -1,0 +1,33 @@
+<div class="register">
+    <div class="register-card">
+        <h2 class="register-text register-text--title">Sign in</h2>
+        <form id="registerForm" method="post">
+            <div class="register-option">
+                <label for="first_name" class="register-text register-text--form-label"> First Name </label>
+                <input type="text" class="register-input" autocomplete="name" name="first_name" required>
+            </div>
+            <div class="register-option">
+                <label for="last_name" class="register-text register-text--form-label"> Last Name </label>
+                <input type="text" class="register-input" autocomplete="additional-name" name="last_name" required>
+            </div>
+            <div class="register-option">
+                <label for="age" class="register-text register-text--form-label"> Age </label>
+                <input type="number" min="0" max="150" class="register-input" name="age" required>
+            </div>
+            <div class="register-option">
+                <label for="email" class="register-text register-text--form-label"> Email </label>
+                <input type="email" class="register-input" autocomplete="email" name="email" required>
+            </div>
+            <div class="register-option">
+                <label for="password" class="register-text register-text--form-label"> Password </label>  
+                <input type="password" class="register-input" maxlength="20" minlength="8"  autocomplete="new-password" name="password" required>                              
+            </div>
+            <button type="submit" class="register-button register-button--submit">Register</button>
+            <div class="register-option register-option--link">
+                <a href="/api/sessions/viewlogin" class="register-link">
+                    Already have an account? Log in.
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

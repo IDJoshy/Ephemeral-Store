@@ -1,0 +1,21 @@
+<div class="login">
+    <div class="login-card">
+        <h2 class="login-text login-text--title">Log in</h2>
+        <form id="loginForm" method="post">
+            <div class="login-option">
+                <label for="email" class="login-text login-text--form-label"> Email </label>
+                <input type="email" class="login-input" autocomplete="email" name="email" required>
+            </div>
+            <div class="login-option">
+                <label for="password" class="login-text login-text--form-label"> Password </label>  
+                <input type="password" class="login-input" maxlength="20" minlength="8"  autocomplete="new-password" name="password" required>                              
+            </div>
+            <button type="submit" class="login-button login-button--submit">Log-in</button>
+            <div class="login-option login-option--link">
+                <a href="/api/sessions/viewlogin" class="login-link">
+                    Don't have an account? Sign up.
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
